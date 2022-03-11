@@ -149,18 +149,95 @@ fs.mkdir('new-one ', function () {
 });
 */
 
+// удаление прошлой папки 
+
+// папка должн абыть пустой 
+/*
+fs.rmdir('new-one', function () {
+    
+})
+*/
+
+    //Работа и создание сервера на Node  // (ctl+ c)- стоп сервера 
+/*
+    var http = require('http');
+    var server = http.createServer(function (req, res) {
+        console.log("url страницы: "+req.url);
+        res.writeHead(200, {'Content-Type': 'text/plan; charset=utf-8'});
+        res.end('Привет мир! '); // то что отображается на страние
+    });
+
+ server.listen(3000, '127.0.0.1');
+ console.log("Мы отслеживаем порт 3000");
+*/ 
+
+    //Работа с потоками в Node JS 
+    // постепенная загрузка текста 
+    /*
+    var fs = require('fs');
+    
+    var myReadShort = fs.createReadStream(__dirname+ '/text.txt', 'utf8');
+
+    myReadShort.on('data', function (chunk) {
+        console.log("Новые данные оплучены:\n "+ chunk);
+    });
+    */
+
+    // запись? 
+    /*
+    var fs = require('fs');
+    
+    var myReadShort = fs.createReadStream(__dirname+ '/text.txt', 'utf8');
+    var myWriteShort = fs.createWriteStream(__dirname+ '/news.txt', );
 
 
+    myReadShort.on('data', function (chunk) {
+        console.log("Новые данные оплучены:");
+        myWriteShort.write(chunk);
+    });
+    */
+
+    //Функция pipe(), работа с HTML и JSON
+
+    var fs = require('fs');
+    
+    // подключение к локалу 
+    // (text/plain) -вывод только текста 
+    // (text/html)- вывод кода 
+    // (application/json) - вывод js
+    /*
+    var http = require('http');
+    var server = http.createServer(function (req, res) {
+        console.log("url страницы: "+req.url);
+        res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
+        
+        var myReadShort = fs.createReadStream(__dirname+ '/index.html', 'utf8');
 
 
+        myReadShort.pipe (res);
+     
+    });
 
+    server.listen(3000, '127.0.0.1');
+    console.log("Мы отслеживаем порт 3000");
+    */
+   /*
+    var http = require('http');
+    var server = http.createServer(function (req, res) {
+        console.log("url страницы: "+req.url);
+        res.writeHead(200, {'Content-Type': 'application/json; charset=utf-8'});
+        var obj = {
+            model : 'Audi',
+            speed: '234.5',
+            wheels : 4
+        };
+    res.end(JSON.stringify(obj));
 
+    });
 
+    server.listen(3000, '127.0.0.1');
+    console.log("Мы отслеживаем порт 3000");
+    */
 
-
-
-
-
-
-
+    //Маршрутизация Node JS
 
