@@ -198,14 +198,14 @@ fs.rmdir('new-one', function () {
     */
 
     //Функция pipe(), работа с HTML и JSON
-
+/*
     var fs = require('fs');
     
     // подключение к локалу 
     // (text/plain) -вывод только текста 
     // (text/html)- вывод кода 
     // (application/json) - вывод js
-    /*
+    
     var http = require('http');
     var server = http.createServer(function (req, res) {
         console.log("url страницы: "+req.url);
@@ -240,4 +240,64 @@ fs.rmdir('new-one', function () {
     */
 
     //Маршрутизация Node JS
+    // работа с url адресовм
+    /*
+    var fs = require('fs');
 
+    var http = require('http');
+
+    var server = http.createServer( function (req, res) {
+        console.log("URL страницы:" + req.url);
+        if (req.url ==='/index' ||req.url === '/') {
+            res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
+            fs.createReadStream(__dirname+ '/index.html').pipe(res);
+        } 
+        else if (req.url==='/about'){
+            res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
+            fs.createReadStream(__dirname+ '/about.html').pipe(res);
+        } else{
+            res.writeHead(404, {'Content-Type': 'text/html; charset=utf-8'});
+            fs.createReadStream(__dirname+ '/404.html').pipe(res);
+        }
+
+
+    });
+    server.listen(3000, '127.0.0.1');
+    console.log("работает");
+    */
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
