@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "name": "node",
+  "version": "1.0.0",
+  "description": "node",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlmaN03/node.js.git"
+  },
+  "author": "AlmaN",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlmaN03/node.js/issues"
+  },
+  "homepage": "https://github.com/AlmaN03/node.js#readme"
+}
