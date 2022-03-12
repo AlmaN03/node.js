@@ -32,7 +32,7 @@
 
 
 
- 
+
  // уроки https://www.youtube.com/playlist?list=PL0lO_mIqDDFX0qH9w5YQIDV6Wxy0oawet
 
 /*
@@ -198,13 +198,13 @@ fs.rmdir('new-one', function () {
     var http = require('http');
     var server = http.createServer(function (req, res) {
         console.log("url страницы: "+req.url);
-        res.writeHead(200, {'Content-Type': 'text/plan; charset=utf-8'});
+        res.writeHead(200, {'Content-Type': 'text/plain; charset=utf-8'});
         res.end('Привет мир! '); // то что отображается на страние
     });
 
  server.listen(3000, '127.0.0.1');
  console.log("Мы отслеживаем порт 3000");
-*/ 
+*/
 
     //Работа с потоками в Node JS 
     // постепенная загрузка текста 
@@ -256,7 +256,8 @@ fs.rmdir('new-one', function () {
     server.listen(3000, '127.0.0.1');
     console.log("Мы отслеживаем порт 3000");
     */
-   /*
+   
+    /*
     var http = require('http');
     var server = http.createServer(function (req, res) {
         console.log("url страницы: "+req.url);
@@ -304,10 +305,42 @@ fs.rmdir('new-one', function () {
     
 
     //Использование пакетного менеджера npm
+    //
+
+    // Изучение фреймворка Express
+    /*
+    //(get) -отображается в сылке? 
+    //(post) -не отображается в сылке?
 
 
+    var express = require ('express');
 
-    
+    var app = express();
+ 
+
+    // статичные ссылки ?
+
+    ///////////////////////////////////////////////////////
+        app.get('/',function (req,res) {
+            res.send('This is home'); 
+        });
+        app.get('/news',function (req,res) {
+            res.send('This is news'); 
+        });
+    ///////////////////////////////////////////////////////    
+
+    // динамические ссылки ? 
+
+    ////////////////////////////
+    app.get('/news/:id',function (req,res) {
+        res.send('id is - ' + req.params.id); 
+     });
+
+    ////////////////////////////
+
+    app.listen(3000);
+     console.log("работает");
+    */
 
     
 
