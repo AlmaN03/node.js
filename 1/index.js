@@ -1,3 +1,38 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ // СВЯЗИ В КОДЕ МОГУТ БЫТЬ НАРУШЕНЫ ПРОВЕРЯЙ ПУТИ ПОДКЛЮЧЕНИЯ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
  // уроки https://www.youtube.com/playlist?list=PL0lO_mIqDDFX0qH9w5YQIDV6Wxy0oawet
 
 /*
