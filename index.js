@@ -241,6 +241,7 @@ fs.rmdir('new-one', function () {
 
     //Маршрутизация Node JS
     // работа с url адресовм
+    
     /*
     var fs = require('fs');
 
@@ -265,6 +266,12 @@ fs.rmdir('new-one', function () {
     server.listen(3000, '127.0.0.1');
     console.log("работает");
     */
+
+    //Использование пакетного менеджера npm
+
+
+
+    
 
     
 
