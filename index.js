@@ -389,7 +389,7 @@ fs.rmdir('new-one', function () {
     res.sendFile(__dirname + "/index.html"); 
     });
     app.get('/about',function (req,res) {
-        res.sendFile(__dirname + "/about.html"); 
+        res.render('about'); 
     }); 
 
     app.get('/news/:id', function (req, res) {
