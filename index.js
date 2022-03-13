@@ -384,9 +384,16 @@ fs.rmdir('new-one', function () {
     var app = express();
 
     app.set('view engine','ejs');
+
+
+    ///////////////
+    // промежуточные по ( тут все статически файлы) что бы работал (css) и тд
+    app.use('/pablic',express.static('pablic'));
+    ///////////////
+
     
     app.get('/',function (req,res) {
-    res.sendFile(__dirname + "/index.html"); 
+    res.render('index'); 
     });
     app.get('/about',function (req,res) {
         res.render('about'); 
