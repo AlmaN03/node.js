@@ -12,19 +12,12 @@
     <%- include ('blocks/header.ejs' ) %>
 
     
-    <div class="block">
+    <div >
     
         <h1>Новостная страница с id - <%=newsId %> </h1>
-        <p> <%=newParam %></p>
+        
         <p><b>Title:</b> <%=obj.title %></p>
-        <p><b>id:</b> <%=obj.id %></p>
-
-        <ul>
-            <% obj.paragraphs.forEach(function(item) { %>
-                <li> <%=item %></li>
-            <% }); %>
-        </ul>
-
+        
 
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis enim qui odio harum repellendus voluptatem minus debitis,

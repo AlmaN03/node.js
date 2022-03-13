@@ -378,7 +378,7 @@ fs.rmdir('new-one', function () {
 
     // Статические файлы и промежуточное ПО
     
-    
+    /*
     var express = require ('express');
 
     var app = express();
@@ -406,9 +406,75 @@ fs.rmdir('new-one', function () {
 
     app.listen(3000); 
     console.log("работает");
+    */
 
+    //Создание HTML-формы и получение данных
 
+ /*
+    var express = require ('express');
+    var bodyParser = require('body-parser')
 
+    var app = express();
+
+    var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
+    app.set('view engine','ejs');
+    app.use('/pablic',express.static('pablic')); 
+
+    app.get('/',function (req,res) {
+    res.render('index'); 
+    });
+
+    app.get('/about',function (req,res) {
+        res.render('about'); 
+    }); 
+
+    app.post('/about', urlencodedParser, function (req,res) {
+        if(!req.body) return res.sendStatus(400);
+        console.log(req.body);
+        res.render('about-success',{data: req.bady}); 
+    }); 
+
+    app.get('/news/:id', function (req, res) {
+        var obj = {title: "Новость", id:4 , paragraphs:['параграф', ' обычный текст', 'Числа: 2, 4, 6',99] };
+        res.render('news', {newsId: req.params.id, newParam: 234, obj:obj }); 
+    });
+
+    app.listen(3000); 
+    console.log("работает");
+*/
+
+var express = require ('express');
+    var bodyParser = require('body-parser')
+
+    var app = express();
+
+    var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
+    app.set('view engine','ejs');
+    app.use('/pablic',express.static('pablic')); 
+
+    app.get('/',function (req,res) {
+    res.render('index'); 
+    });
+
+    app.get('/about',function (req,res) {
+        res.render('about'); 
+    }); 
+
+    app.post('/about', urlencodedParser, function (req,res) {
+        if(!req.body) return res.sendStatus(400);
+        console.log(req.body);
+        res.render('about-success',{data: req.bady}); 
+    }); 
+
+    app.get('/news/:id', function (req, res) {
+        var obj = {title: "Новость"};
+        res.render('news', {newsId: req.params.id, obj:obj }); 
+    });
+
+    app.listen(3000); 
+    console.log("работает");
 
     
 
